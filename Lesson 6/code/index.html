@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <!doctype html>
@@ -37,3 +38,27 @@
 
 	</body>
 </html>
+=======
+<html>
+
+<head></head>
+
+<body>
+
+	<script type="text/javascript">
+		var httpRequest = new XMLHttpRequest();
+		httpRequest.onreadystatechange = function () {
+			if (httpRequest.readyState !== 4 ) {
+				return;
+			}
+			if (httpRequest.status !== 200) {
+				throw new Error('Request failed');
+			}
+			console.log(httpRequest.responseText);
+		};
+	httpRequest.open('POST', '/api/todos');
+	httpRequest.send(JSON.stringify([{id: 0, value: 'test'}, {id: 1, value: 'test222'}]));
+	</script>
+</body>
+</html>
+>>>>>>> parent of f4fa0d4... homework lesson 7

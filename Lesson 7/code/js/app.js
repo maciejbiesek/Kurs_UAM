@@ -8,6 +8,7 @@ window.addEventListener('DOMContentLoaded', function () {
 	var footerView = new UAM.FooterView(document.querySelector('#footerview'));
 
 	new InputCtrl(inputView, store);
+<<<<<<< HEAD
 	new ListCtrl(listView, store);
 	new FooterCtrl(footerView, store);
 
@@ -28,4 +29,8 @@ window.addEventListener('DOMContentLoaded', function () {
 	}
 	httpRequest.open('GET', '/api/todos');
 	httpRequest.send();
+=======
+	new ListCtrl(listView, store, UAM.Http);
+	new FooterCtrl(footerView, store);
+>>>>>>> parent of f4fa0d4... homework lesson 7
 });
