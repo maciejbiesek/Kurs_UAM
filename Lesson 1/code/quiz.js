@@ -61,10 +61,10 @@ describe('Guess the value of the variable', function () {
 		var foo = 1;
 
 		var bar = function () {
+			var foo;
+			expect(foo).toBe(undefined);
 
-			expect(foo).toBe();
-
-			var foo = 3;
+			foo = 3;
 			b = 4;
 			return foo + 2;
 		};
