@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 
 <!doctype html>
 <html>
@@ -38,27 +36,3 @@
 
 	</body>
 </html>
-=======
-<html>
-
-<head></head>
-
-<body>
-	Test zapytania POST.
-
-	<script type="text/javascript">
-		var httpRequest = new XMLHttpRequest();
-		httpRequest.onload = function () {
-			if (httpRequest.status !== 200) {
-				throw new Error('Request failed');
-			}
-			console.log(httpRequest);
-		};
-	httpRequest.open('POST', '/api/todos');
-	httpRequest.responseType="json";
-	httpRequest.setRequestHeader('Content-Type', 'application/json');
-	httpRequest.send(JSON.stringify([{id: 0, value: 'test'}, {id: 1, value: 'test222'}]));
-	</script>
-</body>
-</html>
->>>>>>> parent of f4fa0d4... homework lesson 7
