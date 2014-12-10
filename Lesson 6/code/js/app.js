@@ -13,19 +13,21 @@ window.addEventListener('DOMContentLoaded', function () {
 
 	var httpRequest = new XMLHttpRequest();
 	httpRequest.onreadystatechange = function() {
+		console.log("here");
 		if (httpRequest.readyState !== 4) {
 			return;
 		}
 		if (httpRequest.status !== 200) {
-			alert("Oooops, something went wrong!");
 			throw new Error('Request failed');
 		}
 		var data = JSON.parse(httpRequest.responseText);
+		// console.log(data);
 		data.forEach(function(element) {
-			store.add(element.name, element.state);
+			store.add(element.value);
 		});
-		store.update();
 	}
 	httpRequest.open('GET', '/api/todos');
 	httpRequest.send();
+
+	
 });
